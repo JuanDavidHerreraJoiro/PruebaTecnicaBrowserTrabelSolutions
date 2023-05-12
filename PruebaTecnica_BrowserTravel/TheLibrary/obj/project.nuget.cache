@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "29hjM4CDHU46e7zS/ll+OOS3ouNnm/GZWiExaeCBuRrKhc48oeJvfidPe0ayr2khGjFBBbO9+tESD3SaITIptQ==",
+  "dgSpecHash": "sBexFzTrqvEqJoEPGKuMbYTttOLYxie6MVsiNCOdFHa4FrzrkVswPQqOue3ODXZMntoBV3zdb6geJFuc+4xUMg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Juand\\Downloads\\Prueba Técnica - Desarrollador 02\\PruebaTecnicaBrowserTrabelSolutions\\PruebaTecnica_BrowserTravel\\TheLibrary\\TheLibrary.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\Juand\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
     "C:\\Users\\Juand\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.17\\microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512",
     "C:\\Users\\Juand\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.17\\microsoft.entityframeworkcore.design.5.0.17.nupkg.sha512",
+    "C:\\Users\\Juand\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.0\\microsoft.entityframeworkcore.inmemory.5.0.0.nupkg.sha512",
     "C:\\Users\\Juand\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.17\\microsoft.entityframeworkcore.relational.5.0.17.nupkg.sha512",
     "C:\\Users\\Juand\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.17\\microsoft.entityframeworkcore.sqlserver.5.0.17.nupkg.sha512",
     "C:\\Users\\Juand\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.17\\microsoft.entityframeworkcore.tools.5.0.17.nupkg.sha512",

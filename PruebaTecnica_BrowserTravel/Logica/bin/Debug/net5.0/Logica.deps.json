@@ -9,7 +9,8 @@
       "Logica/1.0.0": {
         "dependencies": {
           "Datos": "1.0.0",
-          "Entidad": "1.0.0"
+          "Entidad": "1.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.0"
         },
         "runtime": {
           "Logica.dll": {}
@@ -415,6 +416,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.0": {},
+      "Microsoft.EntityFrameworkCore.InMemory/5.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.52303"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0",
@@ -1816,6 +1828,7 @@
         "dependencies": {
           "Entidad": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Core": "5.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.0"
@@ -1825,6 +1838,9 @@
         }
       },
       "Entidad/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.0"
+        },
         "runtime": {
           "Entidad.dll": {}
         }
@@ -1962,6 +1978,13 @@
       "sha512": "sha512-l1c/1ge8ymXgLqtstTyX3PZOLRuFo1jn0FQ9H4ag3Bwz70KTMyEOXwkKBZZ1gDlCibETrooflMis8wvvXFh5YQ==",
       "path": "microsoft.entityframeworkcore.analyzers/5.0.0",
       "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4p98EdOJXs56nr7N+UjKvwEhAMs0uiJnJjXFSgpiaq9ZbAa5PEMklC0Q6yDEg6I5B4/GvVgb5vMhjn6P2t15Bg==",
+      "path": "microsoft.entityframeworkcore.inmemory/5.0.0",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.5.0.0.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.0": {
       "type": "package",

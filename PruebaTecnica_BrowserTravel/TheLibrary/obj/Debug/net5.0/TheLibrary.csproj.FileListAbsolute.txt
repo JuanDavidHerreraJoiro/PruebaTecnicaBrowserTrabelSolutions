@@ -288,3 +288,4 @@ C:\Users\Juand\Downloads\Prueba Técnica - Desarrollador 02\PruebaTecnicaBrowser
 C:\Users\Juand\Downloads\Prueba Técnica - Desarrollador 02\PruebaTecnicaBrowserTrabelSolutions\PruebaTecnica_BrowserTravel\TheLibrary\obj\Debug\net5.0\TheLibrary.pdb
 C:\Users\Juand\Downloads\Prueba Técnica - Desarrollador 02\PruebaTecnicaBrowserTrabelSolutions\PruebaTecnica_BrowserTravel\TheLibrary\obj\Debug\net5.0\TheLibrary.genruntimeconfig.cache
 C:\Users\Juand\Downloads\Prueba Técnica - Desarrollador 02\PruebaTecnicaBrowserTrabelSolutions\PruebaTecnica_BrowserTravel\TheLibrary\obj\Debug\net5.0\ref\TheLibrary.dll
+C:\Users\Juand\Downloads\Prueba Técnica - Desarrollador 02\PruebaTecnicaBrowserTrabelSolutions\PruebaTecnica_BrowserTravel\TheLibrary\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll

@@ -490,6 +490,22 @@
           "build/netcoreapp3.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.17": {
         "type": "package",
         "dependencies": {
@@ -2417,6 +2433,7 @@
         "dependencies": {
           "Entidad": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Core": "5.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.0"
@@ -2431,6 +2448,9 @@
       "Entidad/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/Entidad.dll": {}
         },
@@ -2443,7 +2463,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Datos": "1.0.0",
-          "Entidad": "1.0.0"
+          "Entidad": "1.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.0"
         },
         "compile": {
           "bin/placeholder/Logica.dll": {}
@@ -3048,6 +3069,20 @@
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.xml",
         "microsoft.entityframeworkcore.design.5.0.17.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/5.0.0": {
+      "sha512": "4p98EdOJXs56nr7N+UjKvwEhAMs0uiJnJjXFSgpiaq9ZbAa5PEMklC0Q6yDEg6I5B4/GvVgb5vMhjn6P2t15Bg==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.5.0.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.17": {
@@ -7696,6 +7731,7 @@
     "net5.0": [
       "Datos >= 1.0.0",
       "Logica >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
       "Microsoft.VisualStudio.Web.CodeGeneration.Core >= 5.0.0",
@@ -7755,6 +7791,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[5.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.17, )"

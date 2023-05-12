@@ -25,6 +25,12 @@
 		1. ng serve --o
 ------------------------------------------------------------------------------------------
 5. Con lo anterior ya tiene toda la aplicacion corriendo en su totalidad.
+
 ------------------------------------------------------------------------------------------
+6. Pruebas unitarias creadas con nunit todas estas pruebas se encuentran el la carpeta del proyecto de back-ent "PruebasUnitarias"
+	Se pueden ejecutar todas o una por una desde el entorno de Visual Studio
+	
+------------------------------------------------------------------------------------------
+
 
 Nota: Seguir la secuencia de los pasos marcados anterior mente.
