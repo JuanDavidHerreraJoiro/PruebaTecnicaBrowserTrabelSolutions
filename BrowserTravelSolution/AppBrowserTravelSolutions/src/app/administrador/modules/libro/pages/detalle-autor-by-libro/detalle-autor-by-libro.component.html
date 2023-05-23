@@ -1,0 +1,54 @@
+<mat-card>
+    <mat-card-title>
+        <div fxFlex="grow" fxLayout="row" fxLayoutAlign="center center">
+            <div>
+                <span>Detalles autores por libro: {{ nombreLibro | uppercase }}</span>
+            </div>
+        </div>
+    </mat-card-title>
+
+    <hr>
+    <br>
+
+    <ng-container *ngIf="!autores || autores.length === 0; else datos">
+        <app-spinner [lista]="autores"></app-spinner>
+    </ng-container>
+
+    <ng-template #datos>
+        <p-table [value]="autores" #dt [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+            responsiveLayout="scroll" currentPageReportTemplate="Viendo de {first} a {last} de {totalRecords} autores"
+            [rowsPerPageOptions]="[10,25,50]" [globalFilterFields]="['isbn','nombre','apellido','n_paginas']">
+            <ng-template pTemplate="caption">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="90">
+                        <app-input-filtro [dt]="dt"></app-input-filtro>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>#</th>
+                    <th>ISBN</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Editorial</th>
+                    <th>Sede</th>
+                    <th style="text-align: center"># Paginas</th>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-autor>
+                <tr>
+                    <td>{{ autor.id }}</td>
+                    <td>{{ libro.isbn }}</td>
+                    <td>{{ autor.nombre }}</td>
+                    <td>{{ autor.apellido}}</td>
+                    <td>{{ libro.editorial.nombre}}</td>
+                    <td>{{ libro.editorial.sede}}</td>
+                    <td style="text-align: center">{{ libro.n_paginas}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </ng-template>
+
+</mat-card>

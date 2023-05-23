@@ -1,0 +1,61 @@
+<mat-card>
+    <mat-card-title>
+        <br>
+        <div fxFlex="grow" fxLayout="row" fxLayoutAlign="center center">
+            <div>
+                <span>Autores</span>
+            </div>
+        </div>
+    </mat-card-title>
+
+    <hr>
+    <br>
+
+    <ng-container *ngIf="!autores || autores.length === 0; else datos">
+        <app-spinner [lista]="autores"></app-spinner>
+    </ng-container>
+
+    <ng-template #datos>
+        <p-table [value]="autores" #dt [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+            responsiveLayout="scroll" currentPageReportTemplate="Viendo de {first} a {last} de {totalRecords} autores"
+            [rowsPerPageOptions]="[10,25,50]" [globalFilterFields]="['nombre','apellido']">
+
+            <ng-template pTemplate="caption">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="90">
+                        <app-input-filtro [dt]="dt"></app-input-filtro>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th  style="text-align: center"># Libros Asociados</th>
+                    <th></th>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-autor>
+                <tr>
+                    <td>{{ autor.id }}</td>
+                    <td>{{ autor.nombre}}</td>
+                    <td>{{ autor.apellido }}</td>
+                    <td  style="text-align: center">{{ autor.libros.length }}</td>
+                    <td>
+                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item  [routerLink]="['/Travel/autor/detalle-libro-by-autor', autor.id]">
+                              <mat-icon>format_list_numbered</mat-icon>
+                              <span>Detalle Libros</span>
+                            </button>
+                        </mat-menu>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </ng-template>
+</mat-card>

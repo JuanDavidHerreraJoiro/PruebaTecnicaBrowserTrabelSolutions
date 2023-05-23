@@ -1,0 +1,63 @@
+<mat-card>
+    <mat-card-title>
+        <br>
+        <div fxFlex="grow" fxLayout="row" fxLayoutAlign="center center">
+            <div>
+                <span>Libros</span>
+            </div>
+        </div>
+    </mat-card-title>
+
+    <hr>
+    <br>
+
+    <ng-container *ngIf="!libros || libros.length === 0; else datos">
+        <app-spinner [lista]="libros"></app-spinner>
+    </ng-container>
+
+    <ng-template #datos>
+        <p-table [value]="libros" #dt [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+            responsiveLayout="scroll" currentPageReportTemplate="Viendo de {first} a {last} de {totalRecords} libros"
+            [rowsPerPageOptions]="[10,25,50]" [globalFilterFields]="['titulo','isbn','libro.autores.length','n_paginas']">
+
+            <ng-template pTemplate="caption">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="90">
+                        <app-input-filtro [dt]="dt"></app-input-filtro>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template pTemplate="header">
+                <tr>
+                    <th># ISBN</th>
+                    <th>Titulo</th>
+                    <th>Editorial</th>
+                    <th style="text-align: center"># paginas</th>
+                    <th style="text-align: center"># Autores</th>
+                    <th></th>
+                </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-libro>
+                <tr>
+                    <td>{{ libro.isbn }}</td>
+                    <td>{{ libro.titulo}}</td>
+                    <td>{{ libro.editorial.nombre}}</td>
+                    <td style="text-align: center">{{ libro.n_paginas}}</td>
+                    <td style="text-align: center">{{ libro.autores.length}}</td>
+                    <td>
+                        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu">
+                            <button mat-menu-item  [routerLink]="['/Travel/libro/detalle-autor-by-libro', libro.isbn]">
+                              <mat-icon>format_list_numbered</mat-icon>
+                              <span>Detalle Autor</span>
+                            </button>
+                        </mat-menu>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </ng-template>
+</mat-card>

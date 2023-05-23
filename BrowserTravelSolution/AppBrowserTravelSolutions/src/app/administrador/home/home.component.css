@@ -1,0 +1,36 @@
+.toolbar-sidenav {
+    background: #00D2B3;
+    color: #ffff;
+    border: 0;
+}
+
+mat-sidenav {
+    background: #3E4E56;
+    width: 260px;
+}
+
+.mat-elevation-z8{
+    background: #00D2B3;
+}
+
+.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.white-icon {
+    color: white;
+}
+
+.texto-blanco {
+    color: #ffff;
+}
+
+mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    /* For macOS/iOS Safari */
+    top: 0;
+    /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+    /* Ensure that your app's content doesn't overlap the toolbar */
+}
